@@ -1,0 +1,22 @@
+name: TipoCambio
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+            python-version: '3.13'
+             
+      - name: Run script
+        run: python
+
+ 
